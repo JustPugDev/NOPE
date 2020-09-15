@@ -50,7 +50,7 @@ public abstract class AbstractCommand extends AbstractModule implements CommandE
 				if (c.getPermission() != null && !sender.hasPermission(c.getPermission())) {
 					MSG.tell(sender,
 							MSG.getString("Command.NoPermission",
-									"&4&l[&c&lNOPE&4&l] &cYou lack the &a%perm% &cpermission.")
+									"&cYou are not allow to do this.")
 									.replace("%perm%", c.getPermission()));
 					return true;
 				}
@@ -60,7 +60,7 @@ public abstract class AbstractCommand extends AbstractModule implements CommandE
 				if (result == CommandResult.NO_PERMISSION) {
 					MSG.tell(sender,
 							MSG.getString("Command.NoPermission",
-									"&4&l[&c&lNOPE&4&l] &cYou lack the &a%perm% &cpermission.")
+									"&cYou are not allow to do this.")
 									.replace("%perm%", c.getPermission()));
 					return true;
 				}
